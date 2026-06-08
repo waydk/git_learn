@@ -1,3 +1,6 @@
+console.log("Hello, World!");
+
+
 function generatePassword({
     length = 16,
     numbers = true,
@@ -28,3 +31,5 @@ console.log(generatePassword({
     numbers: true,
     symbols: true
 }));
+
+
