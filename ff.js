@@ -1,6 +1,18 @@
-function generatePassword(length = 12) {
-    const chars =
-        "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*";
+function generatePassword({
+    length = 16,
+    numbers = true,
+    symbols = true
+} = {}) {
+
+    const lowercase = "abcdefghijklmnopqrstuvwxyz";
+    const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const digits = "0123456789";
+    const special = "!@#$%^&*()_+-=[]{}";
+
+    let chars = lowercase + uppercase;
+
+    if (numbers) chars += digits;
+    if (symbols) chars += special;
 
     let password = "";
 
@@ -11,4 +23,8 @@ function generatePassword(length = 12) {
     return password;
 }
 
-console.log(generatePassword(16));
+console.log(generatePassword({
+    length: 20,
+    numbers: true,
+    symbols: true
+}));
