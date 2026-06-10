@@ -1,0 +1,17 @@
+
+body {
+    background-color: rgb(226, 212, 212);
+    text-align: center;
+}
+
+.card {
+    text-align: center;
+    padding: 100px;
+    margin: 50px;
+    border: 1px solid green;
+}
+
+nav {
+    text-align: center;
+    
+}
